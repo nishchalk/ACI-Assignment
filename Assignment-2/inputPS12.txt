@@ -1,0 +1,13 @@
+PS12
+SCENARIO_1_ROAD_ACCIDENT
+P_A=0.07
+P_D_given_A=0.88
+P_D_given_notA=0.25
+P_E_given_A=0.82
+P_E_given_notA=0.10
+SCENARIO_2_TRAFFIC_SIGNAL_FAILURE
+P_S=0.05
+P_C_given_S=0.90
+P_C_given_notS=0.12
+P_R_given_S=0.87
+P_R_given_notS=0.08

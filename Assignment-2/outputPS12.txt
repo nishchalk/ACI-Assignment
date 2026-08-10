@@ -1,0 +1,22 @@
+Scenario 1 - Joint Probability Table
+A	D	E	Probability
+T	T	T	0.0505
+T	T	F	0.0111
+T	F	T	0.0069
+T	F	F	0.0015
+F	T	T	0.0233
+F	T	F	0.2093
+F	F	T	0.0698
+F	F	F	0.6278
+Scenario 1: Road Accident Prediction
+P(A | D) = 0.2095
+P(A | E) = 0.3816
+P(A | D and E) = 0.6848
+Traffic Delay and Emergency Call are not independent without evidence.
+Traffic Delay and Emergency Call are conditionally independent given Road Accident.
+Scenario 2: Traffic Signal Failure Detection
+P(S | C) = 0.2830
+P(S | R) = 0.3640
+P(S | C and R) = 0.8111
+Camera Alert and Sensor Alert are not independent without evidence.
+Camera Alert and Sensor Alert are conditionally independent given Traffic Signal Failure.
