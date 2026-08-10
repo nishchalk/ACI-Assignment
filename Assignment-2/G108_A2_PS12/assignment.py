@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Assignment 2 – PS12: Bayesian Network for traffic monitoring.
+Assignment 2 - PS12: Bayesian Network for traffic monitoring.
 
 Implements a reusable common-cause Bayesian Network with exact inference
 via joint enumeration (not hard-coded per-query formulas).
@@ -337,7 +337,7 @@ def are_marginally_independent(
     var_names: Sequence[str],
     tol: float = INDEPENDENCE_TOLERANCE,
 ) -> bool:
-    """Check Y ⊥ Z by comparing P(Y=T,Z=T) with P(Y=T)P(Z=T)."""
+    """Check Y and Z independent by comparing P(Y=T,Z=T) with P(Y=T)P(Z=T)."""
     p_yz = marginal(joint, {y_name: True, z_name: True}, var_names)
     p_y = marginal(joint, {y_name: True}, var_names)
     p_z = marginal(joint, {z_name: True}, var_names)
@@ -352,7 +352,7 @@ def are_conditionally_independent(
     var_names: Sequence[str],
     tol: float = INDEPENDENCE_TOLERANCE,
 ) -> bool:
-    """Check Y ⊥ Z | X for both values of X."""
+    """Check Y and Z independent given X for both values of X."""
     for x_val in (True, False):
         p_x = marginal(joint, {x_name: x_val}, var_names)
         if p_x == 0.0:
@@ -517,9 +517,7 @@ def main() -> int:
     with open(output_path, "w", encoding="utf-8") as handle:
         handle.write(output_text)
 
-    # Keep console quiet for submission-friendly runs; uncomment for local debug:
     # print(output_text, end="")
-    # print(f"Wrote {output_path}")
     return 0
 
 
